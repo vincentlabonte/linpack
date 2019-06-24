@@ -11,7 +11,7 @@ q=
 while getopts "h?2b:m:n:p:q" opt; do
     case "$opt" in
         h|\?)
-            echo "run_hplinpack.sh parameters"
+            echo "setup_hplinpack.sh parameters"
             echo ""
             echo "-2 enable avx2"
             echo "-b [block size]"
@@ -102,10 +102,8 @@ else
 fi
 export HPL_EXE=xhpl_intel64_static
 
-# execute benchmark
-linpack_dir=/intel/mkl/benchmarks/mp_linpack
-bin=runme_intel64_prv
-cmd=$(eval echo "${SHIPYARD_SINGULARITY_COMMAND}")
-echo "Singularity command: $cmd"
-mpirun -hosts $AZ_BATCH_HOST_LIST -perhost 1 -np $nodes \
-    $cmd ${linpack_dir}/${bin} -p $p -q $q -b $b $psize
+# export parameters
+export p=$p
+export q=$q
+export b=$b
+export psize=$psize
