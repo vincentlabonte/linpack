@@ -109,3 +109,5 @@ export p=$p
 export q=$q
 export b=$b
 export psize=$psize
+
+mpirun
