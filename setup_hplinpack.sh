@@ -92,8 +92,6 @@ fi
 export MANPATH=$MANPATH:/usr/local/man
 source /opt/intel/compilers_and_libraries/linux/mpi/bin64/mpivars.sh
 
-printenv
-
 # set exports
 export MPI_PER_NODE=1
 export I_MPI_DAPL_DIRECT_COPY_THRESHOLD=655360
@@ -105,9 +103,7 @@ fi
 export HPL_EXE=xhpl_intel64_static
 
 # export parameters
-export p=$p
-export q=$q
-export b=$b
-export psize=$psize
-
-mpirun --help
+export p
+export q
+export b
+export psize
