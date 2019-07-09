@@ -100,7 +100,6 @@ if [ $avx2 -eq 1 ]; then
 else
     export MKL_CBWR=AVX
 fi
-export HPL_EXE=xhpl_intel64_static
 
 # export parameters
 export p
