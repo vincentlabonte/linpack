@@ -13,7 +13,7 @@ yum clean all
 mkdir /install
 pushd /install
 curl -fSsL https://software.intel.com/sites/default/files/managed/4b/33/l_comp_lib_2017.2.174_comp.cpp_redist.tgz | tar zxvpf  -
-curl -fSsL http://registrationcenter-download.intel.com/akdlm/irc_nas/9752/l_mklb_p_2017.3.018.tgz | tar zxvpf -
+curl -fSsL http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/13651/l_mpi_2018.4.274.tgz | tar zxvpf -
 # install intel c++ and benchmark redistributables into /intel
 cd l_comp_lib_2017.2.174_comp.cpp_redist
 ./install.sh -i /intel -e
